@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Palavras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Digite a Palavra da Imagem</h1>
+        <div class="image-container">
+            <img id="imagemCarrossel" src="./imagemCarrossel/imagem1.jpg" alt="">
+        </div>
+        <input type="text" id="userInput" placeholder="Escreva a palavra aqui">
+        <button id="verificarBtn" onclick="verificarPalavra()">Verificar</button>
+        <p id="resultado"></p>
+        <button id="reiniciarBtn" style="display:none;" onclick="reiniciarJogo()">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 // Lista de palavras corretas
 const palavrasCorretas = ["avião", "navio", "casa", "gato", "princesa", "cachorro", "cavaleiro"]; // Adicione as palavras correspondentes às imagens
-const coresDeFundo = ["#FFDDC1", "#C1E1FF", "#C1FFD7"];  // Adicione cores para cada imagem
+const coresDeFundo = ["#FFDDC1", "#C1E1FF", "#C1FFD7", "#ffc1c1", "#fff9c1", "#c1fffa", "#e8c1ff"];  // Adicione cores para cada imagem
 
 // Índice da imagem atual no carrossel
 let imagemAtual = 0;
