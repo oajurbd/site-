@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRUTAS</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+const palavrasCorretas = ["banana", "morango", "melancia", "kiwi", "abacate", "abacaxi", "uva", "limão", "carambola", "laranja", "coco", "maçã", "cereja", "maracuja", "mamão"];
+const coresDeFundo = ["#FFDDC1", "#C1E1FF", "#C1FFD7", "#ffc1c1", "#fff9c1", "#c1fffa", "#e8c1ff", "#FFDDC1", "#C1E1FF", "#C1FFD7", "#ffc1c1", "#fff9c1", "#c1fffa", "#e8c1ff", "#FFDDC1"]; 
+
+
+let imagemAtual = 0;
+
+
+function verificarPalavra() {
+    const userInput = document.getElementById('userInput').value.toLowerCase();
+    const resultado = document.getElementById('resultado');
+
+    if (userInput === palavrasCorretas[imagemAtual].toLowerCase()) {
+        resultado.textContent = "Correto!";
+        resultado.style.color = "green";
+
+        proximaImagem();
+    } else {
+        resultado.textContent = "Incorreto. Tente novamente.";
+        resultado.style.color = "red";
+    }
+}
+
+
+function proximaImagem() {
+
+    imagemAtual++;
+
+
+    if (imagemAtual < palavrasCorretas.length) {
+
+        document.getElementById('imagemCarrossel').src = `./img_frutas/imagem${imagemAtual + 1}.jpg`;
+
+        document.getElementById('userInput').value = "";
+        document.getElementById('resultado').textContent = "";
+
+        document.body.style.backgroundColor = coresDeFundo[imagemAtual];
+
+    } else {
+
+        document.getElementById('resultado').textContent = "Parabéns! Você concluiu todas as palavras.";
+        document.getElementById('userInput').disabled = true;
+        document.getElementById('userInput').style.display = 'none'; 
+        document.getElementById('reiniciarBtn').style.display = 'block';
+        document.getElementById('verificarBtn').style.display = 'none';
+    }
+}
+
+
+// Função para reiniciar o jogo
+function reiniciarJogo() {
+    imagemAtual = 0;
+    document.getElementById('imagemCarrossel').src = `./img_frutas/imagem1.jpg`;  
+    document.getElementById('userInput').value = ""; 
+    document.getElementById('resultado').textContent = ""; 
+    document.getElementById('userInput').disabled = false;  
+    document.getElementById('userInput').style.display = 'block'; 
+    document.getElementById('reiniciarBtn').style.display = 'none'; 
+    document.getElementById('verificarBtn').style.display = 'block';
+
+    document.body.style.backgroundColor = coresDeFundo[0];
+}
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Digite a fruta da Imagem</h1>
+        <div class="image-container">
+            <img id="imagemCarrossel" src="./img_frutas/imagem1.jpg" alt="">
+        </div>
+        <input type="text" id="userInput" placeholder="Escreva a palavra aqui">
+        <button id="verificarBtn" onclick="verificarPalavra()">Verificar</button>
+        <p id="resultado"></p>
+        <button id="reiniciarBtn" style="display:none;" onclick="reiniciarJogo()">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
