@@ -1,53 +1,94 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel de Palavras</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Grid</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #text{
+            text-align: center;
+            font-size: 50px;
+            margin-top: 100px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+            margin-bottom: 20px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px, 300px));
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card h1{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
+        .card{
+            background-color: #ffe282;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.30s;
+            cursor: pointer;
+        }
+        .card:hover{
+            scale: 1.1;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="escolha">Escolha os personagens</h1>
+    <h1 id="text">Escolha uma categoria!</h1>
     <div class="container">
-        <div class="card" style="color: rgb(245, 127, 9);">
-            <div class="caixaimg">
-                <img src="img/aventureiraa.png" alt="">
+        <a href="./frutas.html">
+        <div class="card">
+            <img src="./img_frutas/imagem1.jpg" alt="">
+            <div class="texto">
+                <h1>Frutas</h1>
             </div>
-        
-        <div class="conteudo">
-            <h2>Liora a Exploradora Destemida</h2>
-            <p>Liora é uma jovem exploradora destemida que cresceu em uma vila próxima à Floresta Encantada. 
-                Desde criança, ela sempre foi curiosa e apaixonada por descobrir os segredos da natureza.</p>
-                <a href="historia liora/inicioaventu.html" style=" background-color: rgb(250, 117, 8);">Jogar</a>
         </div>
-    </div>
+        </a>
 
-        <div class="card" style="color: rgb(44, 41, 254);">
-            <div class="caixaimg">
-                <img src="img/magoo.png" alt="">
+        <a href="./animais.html">
+        <div class="card">
+            <img src="./img_animais/imagem15.jpg" alt="">
+            <div class="texto">
+                <h1>Animais</h1>
             </div>
-        
-        <div class="conteudo">
-            <h2>Arion o Sábio dos Elementos</h2>
-            <p>Arion é um mago sábio que passou anos estudando os segredos da magia e da natureza. 
-                Ele é conhecido por suas habilidades de leitura de símbolos antigos e sua conexão com os elementos.</p>
-                <a href="historia arion/iniciomago.html" style="background-color: rgb(75, 72, 255);">Jogar</a>   
         </div>
-    </div>
+        </a>
 
-
-        <div class="card" style="color: rgb(68, 218, 4);">
-            <div class="caixaimg">
-                <img src="img/fada.png" alt="">
+        <a href="./objetos.html">
+        <div class="card">
+            <img src="./img_objetos/imagem15.jpg" alt="">
+            <div class="texto">
+                <h1>Objetos</h1>
             </div>
-        
-        <div class="conteudo">
-            <h2>Seraphina a Guardiã da Floresta</h2>
-            <p>Seraphina é uma guardiã dedicada da Floresta Encantada, 
-                responsável por manter o equilíbrio entre a natureza e os seres que a habitam. 
-                Ela possui a habilidade única de se comunicar com os animais e as plantas.</p>
-                <a href="historia fada/iniciofada.html" style="background-color: rgb(73, 212, 4);">Jogar</a>
         </div>
+        </a> 
     </div>
 </body>
 </html>

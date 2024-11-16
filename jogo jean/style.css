@@ -21,6 +21,10 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 50%;
+    transition: 0.30s;
+}
+.container:hover{
+    scale: 1.05;
 }
 
 h1 {

@@ -46,7 +46,7 @@ function proximaImagem() {
 
     } else {
 
-        document.getElementById('resultado').textContent = "Parabéns! Você concluiu todas as palavras.";
+        document.getElementById('resultado').textContent = "Parabéns! Você acertou todas as palavras.";
         document.getElementById('userInput').disabled = true;
         document.getElementById('userInput').style.display = 'none'; 
         document.getElementById('reiniciarBtn').style.display = 'block';
@@ -73,14 +73,14 @@ function reiniciarJogo() {
 </head>
 <body>
     <div class="container">
-        <h1>Digite a fruta da Imagem</h1>
+        <h1>Qual o nome dessa fruta?</h1>
         <div class="image-container">
             <img id="imagemCarrossel" src="./img_frutas/imagem1.jpg" alt="">
         </div>
         <input type="text" id="userInput" placeholder="Escreva a palavra aqui">
         <button id="verificarBtn" onclick="verificarPalavra()">Verificar</button>
         <p id="resultado"></p>
-        <button id="reiniciarBtn" style="display:none;" onclick="reiniciarJogo()">Reiniciar Jogo</button>
+        <button id="reiniciarBtn" style="display:none;" onclick="reiniciarJogo()">Jogar novamente.</button>
     </div>
 
     <script src="script.js"></script>
